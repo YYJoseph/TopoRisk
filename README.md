@@ -1,5 +1,7 @@
 # TopoRisk
 
+[English](README.md) | [简体中文](README_zh-CN.md)
+
 **Dependency-aware verification allocation for agentic workflows**
 
 TopoRisk allocates a limited audit budget across a workflow graph. It estimates
