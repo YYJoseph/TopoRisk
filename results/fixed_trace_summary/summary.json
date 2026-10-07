@@ -1,0 +1,21 @@
+{
+  "workflows": 18,
+  "write_nodes": 44,
+  "retained_constructed_hazards": 36,
+  "verification_calls_per_workflow": 1,
+  "deepseek_scores_qwen_verifier": {
+    "local_risk_mean_residual_loss": 2.443,
+    "robust_toporisk_mean_residual_loss": 1.917,
+    "paired_difference": -0.526,
+    "workflow_bootstrap_95_ci": [-0.826, -0.251],
+    "wins_losses_ties": [8, 0, 10]
+  },
+  "qwen_scores_deepseek_verifier": {
+    "local_risk_mean_residual_loss": 2.294,
+    "robust_toporisk_mean_residual_loss": 1.750,
+    "paired_difference": -0.544,
+    "workflow_bootstrap_95_ci": [-0.848, -0.258],
+    "wins_losses_ties": [8, 0, 10]
+  },
+  "scope": "Constructed two-hazard, one-check allocation test over frozen real conversational contexts; not a natural-error-rate or deployment-safety estimate."
+}

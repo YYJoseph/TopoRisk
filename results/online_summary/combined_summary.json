@@ -1,0 +1,26 @@
+{
+  "tasks": 15,
+  "trials_per_task": 3,
+  "paired_runs": 45,
+  "baseline_success": 39,
+  "verified_success": 39,
+  "baseline_db_success": 39,
+  "verified_db_success": 39,
+  "paired_wins": 2,
+  "paired_losses": 2,
+  "paired_ties": 41,
+  "percentage_point_delta": 0.0,
+  "task_cluster_bootstrap_95_ci_pp": [
+    -6.666666666666667,
+    6.666666666666667
+  ],
+  "retained_verifier_calls": 41,
+  "all_verifier_api_calls": 42,
+  "verifier_prompt_tokens": 259871,
+  "verifier_completion_tokens": 5256,
+  "verifier_cost_estimate_usd": 0.033869786,
+  "baseline_total_estimated_cost_usd": 0.377858232,
+  "verified_total_estimated_cost_usd": 0.4217398339999999,
+  "relative_total_cost_overhead_percent": 11.613244937852752,
+  "note": "Set A contains tasks 0--9; set B contains tasks 45--49. Costs are LiteLLM estimates."
+}

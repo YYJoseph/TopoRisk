@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use these artifacts, please cite this release."
+title: "TopoRisk"
+type: software
+version: 0.1.0
+date-released: 2026-10-07
+url: "https://huggingface.co/datasets/JosephAA/toporisk-evaluation-artifacts"
+repository-code: "https://github.com/YYJoseph/TopoRisk"
+authors:
+  - given-names: Ye
+    family-names: Yuan
+    email: latentframe028@gmail.com
+abstract: >-
+  Code, aggregate measurements, and figures for dependency-aware verification
+  allocation in agentic workflow graphs. The manuscript is not included in
+  this artifact-first research preview.
+keywords:
+  - language-model agents
+  - verification allocation
+  - workflow graphs
+  - test-time compute
+  - agent evaluation
