@@ -23,12 +23,11 @@ The canonical evaluation artifacts are available on
 | Controlled DAGs, 10% audit budget | Corrupted-sink fraction: 0.261 (local risk) vs. 0.147 (TopoRisk) |
 | Controlled DAGs, 20% audit budget | Corrupted-sink fraction: 0.172 (local risk) vs. 0.059 (TopoRisk) |
 | Fixed-trace allocation stress test | Paired residual-loss differences: -0.526 and -0.544 |
-| Recovered topology, two checks | Dynamic TopoRisk is optimal on 44/44 graphs vs. 40/44 for static edge influence |
-| Recovered topology, three checks | Dynamic TopoRisk and static edge influence tie on all 44 graphs |
+| Recovered topology, two checks | Dynamic TopoRisk is optimal on 44/44 graphs vs. 38/44 for static single-node marginal |
+| Recovered topology, three checks | Dynamic TopoRisk is optimal on 44/44 graphs vs. 38/44 for static single-node marginal |
 | Retail online pilot, DeepSeek agent | 39/45 successes with and without verification |
 | Airline online pilot, DeepSeek agent | 41/45 without verification vs. 37/45 with full Qwen coverage |
 | Airline online pilot, GLM agent | 40/45 without verification vs. 39/45 with full Qwen coverage |
-| GLM verifier cost | Estimated \$0.0471 over 78 retained verifier calls; total GLM cost unavailable |
 
 The fixed-trace study uses constructed hazards over frozen contexts. It is not
 an estimate of natural error frequency or deployment safety. The online null
@@ -36,8 +35,9 @@ and negative results are retained rather than filtered out. The GLM extension
 uses the same DeepSeek user simulator and Qwen verifier as the primary Airline
 study, so it broadens agent coverage without establishing provider-independent
 generality. The recovered-topology study uses real tool-call dependency
-structure but simulated faults; its small budget-two gain tests recomputation,
-not online safety.
+structure but simulated faults; dynamic recomputation improves on the static
+single-node marginal ranking in 6/44 graphs at both tested budgets. This tests
+the allocation mechanism, not online safety.
 
 ## Install
 
