@@ -55,4 +55,14 @@ assert glm["task_cluster_bootstrap_95_ci_percentage_points"] == [
     6.6666666667,
 ]
 
+real_topology = json.loads(
+    (ROOT / "results" / "real_topology_summary" / "summary.json").read_text()
+)
+assert real_topology["graphs"] == 44
+assert real_topology["budget_2"]["dynamic_toporisk_exact_optimal_graphs"] == 44
+assert real_topology["budget_2"]["risk_influence_exact_optimal_graphs"] == 40
+assert real_topology["budget_2"]["wins_losses_ties"] == [4, 0, 40]
+close(real_topology["budget_3"]["dynamic_toporisk_mean_loss"], 0.249247)
+close(real_topology["budget_3"]["risk_influence_mean_loss"], 0.249247)
+
 print("PASS: packaged aggregate artifacts match the public headline values.")

@@ -1,0 +1,9 @@
+{
+  "study": "real-topology multi-check allocation",
+  "graphs": 44,
+  "topology_source": "deduplicated frozen tau3-bench Retail and Airline tool-call traces",
+  "fault_model": "fixed-seed simulated intrinsic and edge-transmission risks",
+  "budget_2": {"risk_influence_mean_loss": 0.354301, "dynamic_toporisk_mean_loss": 0.353855, "risk_influence_exact_optimal_graphs": 40, "dynamic_toporisk_exact_optimal_graphs": 44, "dynamic_minus_risk_influence": -0.00044649, "bootstrap_95_ci": [-0.00119687, -0.00000177], "wins_losses_ties": [4, 0, 40]},
+  "budget_3": {"risk_influence_mean_loss": 0.249247, "dynamic_toporisk_mean_loss": 0.249247, "risk_influence_exact_optimal_graphs": 44, "dynamic_toporisk_exact_optimal_graphs": 44, "wins_losses_ties": [0, 0, 44]},
+  "interpretation": "Dynamic recomputation resolves a small number of overlap cases at budget two and ties the strongest static baseline at budget three; faults remain simulated."
+}
