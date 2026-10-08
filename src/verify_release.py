@@ -43,4 +43,16 @@ assert online["baseline_success"] == online["verified_success"] == 39
 assert online["paired_wins"] == online["paired_losses"] == 2
 close(online["relative_total_cost_overhead_percent"], 11.6, tolerance=0.05)
 
+glm = json.loads((ROOT / "results" / "online_summary" / "glm_airline_summary.json").read_text())
+assert glm["paired_runs"] == 45
+assert glm["baseline_success"] == 40
+assert glm["verified_success"] == 39
+assert glm["baseline_database_match"] == glm["verified_database_match"] == 42
+assert (glm["paired_wins"], glm["paired_losses"], glm["paired_ties"]) == (2, 3, 40)
+close(glm["success_difference_percentage_points"], -2.2222222222)
+assert glm["task_cluster_bootstrap_95_ci_percentage_points"] == [
+    -11.1111111111,
+    6.6666666667,
+]
+
 print("PASS: packaged aggregate artifacts match the public headline values.")

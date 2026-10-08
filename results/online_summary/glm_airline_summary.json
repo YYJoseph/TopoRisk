@@ -1,0 +1,33 @@
+{
+  "study": "GLM-5.3-Flash Airline extension",
+  "benchmark": "tau3-bench Airline",
+  "agent": "glm-5.3-flash",
+  "user_simulator": "deepseek-flash",
+  "verifier": "qwen3.8-flash",
+  "task_count": 15,
+  "trials_per_task": 3,
+  "paired_runs": 45,
+  "baseline_success": 40,
+  "verified_success": 39,
+  "baseline_database_match": 42,
+  "verified_database_match": 42,
+  "success_difference_percentage_points": -2.2222222222,
+  "task_cluster_bootstrap_95_ci_percentage_points": [-11.1111111111, 6.6666666667],
+  "paired_wins": 2,
+  "paired_losses": 3,
+  "paired_ties": 40,
+  "baseline_no_write": 1,
+  "verified_no_write": 2,
+  "retained_verifier_calls": 78,
+  "verifier_decisions": {
+    "approve": 67,
+    "reject": 1,
+    "uncertain": 3,
+    "nonconforming": 7
+  },
+  "verifier_prompt_tokens": 546298,
+  "verifier_completion_tokens": 10569,
+  "verifier_cost_usd_estimate": 0.04711949,
+  "verifier_mean_latency_seconds": 4.021,
+  "notes": "Two provider-level empty-response runs were replaced by exact task-trial reruns. GLM total cost is omitted because inference used a promotional token grant and the runtime lacked a reliable price mapping."
+}

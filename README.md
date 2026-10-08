@@ -23,12 +23,17 @@ The canonical evaluation artifacts are available on
 | Controlled DAGs, 10% audit budget | Corrupted-sink fraction: 0.261 (local risk) vs. 0.147 (TopoRisk) |
 | Controlled DAGs, 20% audit budget | Corrupted-sink fraction: 0.172 (local risk) vs. 0.059 (TopoRisk) |
 | Fixed-trace allocation stress test | Paired residual-loss differences: -0.526 and -0.544 |
-| Online pilot | 39/45 successes in both conditions; no observed end-to-end gain |
-| Online verifier cost | Estimated 11.6% total-cost overhead |
+| Retail online pilot, DeepSeek agent | 39/45 successes with and without verification |
+| Airline online pilot, DeepSeek agent | 41/45 without verification vs. 37/45 with full Qwen coverage |
+| Airline online pilot, GLM agent | 40/45 without verification vs. 39/45 with full Qwen coverage |
+| GLM verifier cost | Estimated \$0.0471 over 78 retained verifier calls; total GLM cost unavailable |
 
 The fixed-trace study uses constructed hazards over frozen contexts. It is not
-an estimate of natural error frequency or deployment safety. The online pilot's
-null result is retained rather than filtered out.
+an estimate of natural error frequency or deployment safety. The online null
+and negative results are retained rather than filtered out. The GLM extension
+uses the same DeepSeek user simulator and Qwen verifier as the primary Airline
+study, so it broadens agent coverage without establishing provider-independent
+generality.
 
 ## Install
 
